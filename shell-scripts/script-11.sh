@@ -16,7 +16,7 @@ elif [[ ! "$password" =~ [A-Z] ]]; then
 	echo "Weak password : password should atleast contain one uppercase character"
 elif [[ ! "$password" =~ [0-9] ]]; then
 	echo "Weak password : password should atlest contain one number"
-elif [[ ! "$password" =~ [!@#$%*()] ]]; then
+elif [[ ! "$password" =~ [!@$%*()] ]]; then
 	echo "Weak password : password should atleast contain one special charcter"
 else
 	echo "Strong password!"
