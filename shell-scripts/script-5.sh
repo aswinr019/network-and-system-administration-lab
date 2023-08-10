@@ -10,7 +10,8 @@ extension=".new"
 
 for file in "$directory"/*; do
 	if [ -f "$file" ]; then
-		new_file="${file}${extension}"
+ 		IFS='.' read -ra parts <<< "$file"
+		new_file="${parts[0]}${extension}"
 		mv "$file" "$new_file"
 		echo "renamed $file to $new_file"
 	fi
